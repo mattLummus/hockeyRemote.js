@@ -47,9 +47,10 @@
     
   function main() {
     var $scores = $('.nhl-scores').first(),
-        $games  = $scores.find('ul').first().find('li').not(':first-child');
-      
-    console.log($games);
-        
+        $games  = $scores.find('ul').first().children().not(':first-child');
+
+    $games.off().on('click', function (ev) {
+        debugger;
+    });
   }
 })();
