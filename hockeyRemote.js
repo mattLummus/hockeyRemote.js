@@ -6,7 +6,7 @@
         console.log('jQuery injected');
     };
     document.head.appendChild(e);
-})(document.createElement('script'), 'code.jquery.com/jquery-latest.min.js')
+})(document.createElement('script'), 'https://code.jquery.com/jquery-latest.min.js')
 
 (function () {
   function init() {
