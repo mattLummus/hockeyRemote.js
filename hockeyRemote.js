@@ -1,17 +1,6 @@
-// Load jQuery
-(function(e, s) {
-    e.src = s;
-    e.onload = function() {
-        jQuery.noConflict();
-        console.log('jQuery injected');
-    };
-    document.head.appendChild(e);
-})(document.createElement('script'), 'https://code.jquery.com/jquery-latest.min.js')
-
-console.log('hockeyRemote init');
-init();  
-    
 (function(){
+    console.log('hockeyRemote init');
+    
     if (!$) {
       fetch$();
       return;
@@ -27,7 +16,8 @@ init();
         $ = jQuery;
         return;
       } // end if(jQuery)
-    
+      
+      requestScript();
       setInterval(intervalFN, 250)
       
       function intervalFN() {
@@ -40,6 +30,19 @@ init();
           return;
         } // end if ($ || jQuery)
       } // end function intervalFN
+      
+      function requestScript() {
+        var e = document.createElement('script'), 
+            s = 'https://code.jquery.com/jquery-latest.min.js');
+        
+            e.src = s;
+            e.onload = function() {
+              jQuery.noConflict();
+              console.log('jQuery injected');
+            };
+  
+            document.head.appendChild(e);
+      } // end function requestScript();
     }  // end function fetch$
     
   function main() {
