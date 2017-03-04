@@ -11,7 +11,7 @@
 console.log('hockeyRemote init');
 init();  
     
-function init() {
+(function(){
     if (!$) {
       fetch$();
       return;
@@ -41,12 +41,12 @@ function init() {
         } // end if ($ || jQuery)
       } // end function intervalFN
     }  // end function fetch$
-} // end function init
     
-function main() {
+  function main() {
     var $scores = $('.nhl-scores').first(),
         $games  = $scores.find('ul').first().find('li').not(':first-child');
       
     console.log($games);
         
-}
+  }
+})();
