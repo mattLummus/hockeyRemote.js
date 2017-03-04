@@ -9,6 +9,9 @@
 })(document.createElement('script'), 'https://code.jquery.com/jquery-latest.min.js')
 
 (function () {
+  console.log('hockeyRemote init');
+  init();  
+    
   function init() {
     if (!$) {
       fetch$();
