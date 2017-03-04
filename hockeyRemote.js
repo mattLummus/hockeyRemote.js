@@ -33,7 +33,7 @@
       
       function requestScript() {
         var e = document.createElement('script'), 
-            s = 'https://code.jquery.com/jquery-latest.min.js');
+            s = 'https://code.jquery.com/jquery-latest.min.js';
         
             e.src = s;
             e.onload = function() {
