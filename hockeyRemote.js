@@ -8,11 +8,10 @@
     document.head.appendChild(e);
 })(document.createElement('script'), 'https://code.jquery.com/jquery-latest.min.js')
 
-(function () {
-  console.log('hockeyRemote init');
-  init();  
+console.log('hockeyRemote init');
+init();  
     
-  function init() {
+function init() {
     if (!$) {
       fetch$();
       return;
@@ -42,13 +41,12 @@
         } // end if ($ || jQuery)
       } // end function intervalFN
     }  // end function fetch$
-  } // end function init
+} // end function init
     
-  function main() {
+function main() {
     var $scores = $('.nhl-scores').first(),
         $games  = $scores.find('ul').first().find('li').not(':first-child');
       
     console.log($games);
         
-  }
-})();
+}
